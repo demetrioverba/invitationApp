@@ -1,0 +1,100 @@
+@import 'fonts';
+
+html, body, div, ul, li {
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;  
+}
+.intro{
+  height: 100vh;
+  background-color: white;
+  background-size: cover;
+  padding: 5%;
+}
+.content-container{
+  height: 100%;
+  padding: 5%;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background:url(/src/assets/blue_smiley2.jpg) no-repeat center;
+  background-size: cover;
+  align-items: center;
+}
+.content_search-form{
+  //height: 100%;
+  //background-color: yellow;
+  //padding-bottom: 200px;
+}
+.content_search-form-wrap{
+  text-align: center;
+  max-width: 445px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 0px 10px 0px;
+  padding-top: 15%;
+  display: block;
+  border: 0px;
+}
+.content_text{
+  width: 100%;
+  margin-bottom: 14px;
+  font-family: 'Russo One';
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: black;
+}
+.search-form_field{
+  width: 100%;
+  max-width: 445;
+  height: 45px;
+  text-align: center;
+  margin-top: 8%;
+  background-color: transparent;
+  border: 8px solid black;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+  &::placeholder{
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: black;
+  }
+}
+
+
+
+
+
+
+/*MEDIA*/
+
+@media screen and (min-width: 1050px){
+   .intro{
+     height: auto;
+     //display: none;
+   }
+   .content_search-form{
+     height: auto;
+     padding-bottom: 15%;
+   }
+  }
+   
