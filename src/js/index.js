@@ -1,14 +1,28 @@
+let searchForm = document.querySelector('.content_search-form');
+let dateInp = document.querySelector('.date');
+let timeInp = document.querySelector('.time');
+let addressInp = document.querySelector('.address');
+let x, y, z;
 
-// var header = document.getElementById("myHeader");
+searchForm.addEventListener('input', e => {
 
-// function myFunction() {
-//     if (window.pageYOffset > sticky) {
+  x = dateInp.value;
+  y = timeInp.value;
+  z = addressInp.value;
 
-//         header.classList.remove("header");
-//         header.classList.add("sticky");
-//     } else {
-//         header.classList.add("header");
-//         header.classList.remove("sticky");
+  if (x.length > 0 && y.length > 0 && z.length > 0) {
+    let btn = document.querySelector('.btnSub');
+    btn.style.display = "block";
+  }
+  else {
+    let btn = document.querySelector('.btnSub');
+    btn.style.display = "none";
+  }
+});
+console.log(x, y, z);
 
-//     }
-// }
+searchForm.addEventListener('submit', e => {
+  e.preventDefault();
+  console.log(x, y, z);
+});
+

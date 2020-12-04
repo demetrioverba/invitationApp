@@ -80,10 +80,26 @@ html{
   }
 }
 
-
-
-
-
+.btnSub{
+  display: none;
+  width: 50%;
+  max-width: 445;
+  height: 45px;
+  font-family: 'Russo One';
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 8%;
+  padding: 2px;
+  background-color: rgb(75, 102, 134);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 5px 7px 4px rgba($color: rgb(31, 39, 44), $alpha: 0.5);
+  //border: 8px solid rgb(106, 116, 119);
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+}
 
 /*MEDIA*/
 
