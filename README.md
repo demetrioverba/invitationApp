@@ -1,4 +1,4 @@
-# Aurora Project
+# invitationApp Project
 
 This project is web project that is based on the webpack. 
 

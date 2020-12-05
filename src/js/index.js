@@ -1,16 +1,21 @@
-let searchForm = document.querySelector('.content_search-form');
-let dateInp = document.querySelector('.date');
-let timeInp = document.querySelector('.time');
-let addressInp = document.querySelector('.address');
-let x, y, z;
+const axios = require('axios');
+
+
+const searchForm = document.querySelector('.content_search-form');
+const dateInp = document.querySelector('.date');
+const timeInp = document.querySelector('.time');
+const addressInp = document.querySelector('.address');
+const BOT_KEY = '1327741791:AAGmx1Nm5_Cbv__IbCvvtV4AB1EkJXe_Uyc';
+const CHAT_ID = '-498282090';
+let date, time, address;
 
 searchForm.addEventListener('input', e => {
 
-  x = dateInp.value;
-  y = timeInp.value;
-  z = addressInp.value;
+  date = dateInp.value;
+  time = timeInp.value;
+  address = addressInp.value;
 
-  if (x.length > 0 && y.length > 0 && z.length > 0) {
+  if (date.length > 0 && time.length > 0 && address.length > 0) {
     let btn = document.querySelector('.btnSub');
     btn.style.display = "block";
   }
@@ -19,10 +24,19 @@ searchForm.addEventListener('input', e => {
     btn.style.display = "none";
   }
 });
-console.log(x, y, z);
 
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
-  console.log(x, y, z);
+  const text = `Приглашаем Вас на собеседование в ${time} ${date} по адресу ${address}`;
+  const encodedText = encodeURIComponent(text);
+  const url = `https://api.telegram.org/bot${BOT_KEY}/sendMessage?chat_id=${CHAT_ID}&text=${encodedText}`;
+
+  console.log(url);
+
+  axios.post(url)
+    .then(
+      (response) => { console.log(response) },
+      (error) => { console.log(error) });
+
 });
 
